@@ -6,7 +6,7 @@ import { NavLink } from 'react-router';
 const Homedata = ({datas}) => {
     return (
         <div className='bg-[#f5f5f5]'>
-            <h1 className='text-center text-4xl font-bold pt-7'>Trending Apps</h1>\
+            <h1 className='text-center text-2xl md:text-4xl font-bold pt-7'>Trending Apps</h1>
             <p className='text-center  text-[#627382]'>Explore All Trending Apps on the Market developed by us</p>
             <div className='grid md:grid-cols-4 grid-cols-1 gap-y-5 p-15 md:p-5 container mx-auto'>
             {

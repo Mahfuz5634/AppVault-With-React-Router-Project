@@ -72,21 +72,21 @@
     ]
   },
   {
-    "image": "https://i.ibb.co.com/dwVW3tV4/spotify-3384019-1280.webp",
-    "title": "Spotify",
-    "companyName": "Spotify AB",
-    "id": 5,
-    "description": "Spotify is a music streaming app offering millions of songs, personalized playlists, podcasts, offline mode, and powerful recommendations.",
-    "size": 35,
-    "reviews": 30000000,
-    "ratingAvg": 4.5,
-    "downloads": 10,
+    "image": "https://i.ibb.co.com/tP1GLk65/linkedin-icon-logo-png-seeklogo-249364.png",
+    "title": "LinkedIn",
+    "companyName": "LinkedIn Corporation",
+    "id": 14,
+    "description": "LinkedIn is a professional networking platform where people connect for jobs, learning, and business opportunities.",
+    "size": 50,
+    "reviews": 35000000,
+    "ratingAvg": 4.4,
+    "downloads": 30,
     "ratings": [
       { "name": "1 star", "count": 2000000 },
       { "name": "2 star", "count": 1500000 },
-      { "name": "3 star", "count": 4000000 },
-      { "name": "4 star", "count": 7000000 },
-      { "name": "5 star", "count": 17500000 }
+      { "name": "3 star", "count": 3000000 },
+      { "name": "4 star", "count": 8000000 },
+      { "name": "5 star", "count": 20500000 }
     ]
   },
   {
@@ -108,21 +108,21 @@
     ]
   },
   {
-    "image": "https://www.tiktok.com/favicon.ico",
-    "title": "TikTok",
-    "companyName": "ByteDance Ltd.",
-    "id": 7,
-    "description": "TikTok is a short-form video platform for creating, watching, and sharing trending videos with global communities through fun, music, and creativity.",
-    "size": 90,
-    "reviews": 60000000,
-    "ratingAvg": 4.4,
-    "downloads": 3,
+    "image": "https://i.ibb.co.com/RpP923QY/netflix-mobile-application-logo-free-png.webp",
+    "title": "Netflix",
+    "companyName": "Netflix Inc.",
+    "id": 10,
+    "description": "Netflix is a streaming service that offers award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+    "size": 85,
+    "reviews": 70000000,
+    "ratingAvg": 4.3,
+    "downloads": 15,
     "ratings": [
-      { "name": "1 star", "count": 6000000 },
+      { "name": "1 star", "count": 5000000 },
       { "name": "2 star", "count": 4000000 },
-      { "name": "3 star", "count": 8000000 },
-      { "name": "4 star", "count": 14000000 },
-      { "name": "5 star", "count": 28000000 }
+      { "name": "3 star", "count": 9000000 },
+      { "name": "4 star", "count": 20000000 },
+      { "name": "5 star", "count": 32000000 }
     ]
   },
   {
