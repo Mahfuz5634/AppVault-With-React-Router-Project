@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { Download, Star, MessageSquare } from "lucide-react";
 import {
@@ -9,14 +9,27 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from "recharts"; // ✅ Recharts import
+} from "recharts";
+
+
+
+const setlocal = (rdata) => {
+    const data = JSON.parse(localStorage.getItem('app')) || [];
+    if (!data.some(item => item === rdata)) {
+        data.push(rdata);
+        localStorage.setItem('app', JSON.stringify(data));
+    }
+}
+
+
 
 const Details = () => {
+  const [active,setactive]= useState(false);
   const data = useLoaderData();
   const { id } = useParams();
   const finalData = data.find((p) => p.id == id);
 
-  // Ratings data for chart
+  
   const ratingData = finalData.ratings.map((r) => ({
     rating: r.name,
     users: r.count,
@@ -72,18 +85,16 @@ const Details = () => {
               </span>
               <span className="text-sm text-gray-500">Total Reviews</span>
             </div>
-            <button className="bg-green-500 text-white px-6 py-2 rounded-md font-medium hover:bg-green-600 transition">
-              Install Now ({finalData.size} MB)
+            <button disabled={active}  onClick={()=>{setlocal(finalData.id);setactive(true);}}  className="bg-green-500 text-white px-6 py-2 rounded-md font-medium hover:bg-green-600 transition">
+              {active?'Installed':'Install Now'} ({finalData.size} MB)
             </button>
           </div>
         </div>
 
-        {/* Gap between card and chart */}
+       
         <div className="mt-10"></div>
 
-        {/* Ratings Chart */}
-        {/* Ratings Chart */}
-        {/* Ratings Chart */}
+       
         <div className="max-w-full bg-white rounded-lg shadow p-8 mt-10">
           <h2 className="text-lg font-semibold mb-4">User Ratings</h2>
           <ResponsiveContainer width="100%" height={300}>
@@ -96,17 +107,17 @@ const Details = () => {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
                 type="number"
-                tickFormatter={(value) => `${(value / 1000000).toFixed(1)}M`} // User count in million
+                tickFormatter={(value) => `${(value / 1000000).toFixed(1)}M`} 
               />
               <YAxis
                 type="category"
                 dataKey="rating"
-                reversed // ✅ 5 star upore
+                reversed 
               />
               <Tooltip
                 formatter={(value) => `${(value / 1000000).toFixed(1)}M`}
               />
-              <Bar dataKey="users" fill="#ff8811" /> {/* ✅ Bar color */}
+              <Bar dataKey="users" fill="#ff8811" />
             </BarChart>
           </ResponsiveContainer>
         </div>
