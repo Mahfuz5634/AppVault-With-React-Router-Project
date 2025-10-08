@@ -20,7 +20,7 @@ const Navbar = () => {
     </div>
    <div className='flex justify-center items-center'>
      <img className='h-[40px] w-[40px] ' src={logo} alt="" />
-    <a className="text-xl font-bold bg-gradient-to-r from-[#7941e8] to-[#9257ef] bg-clip-text text-transparent">
+    <a className="md:text-xl font-bold bg-gradient-to-r from-[#25194eb0] to-[#9257ef] bg-clip-text text-transparent">
   APP-VAULT
 </a>
 
