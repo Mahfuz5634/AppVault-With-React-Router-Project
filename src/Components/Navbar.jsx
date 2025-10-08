@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.png'
 import { FaGithub } from "react-icons/fa";
+import { NavLink } from 'react-router';
 
 const Navbar = () => {
     return (
@@ -13,24 +14,53 @@ const Navbar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li className='font-semibold'><a>Home</a></li>
+          <li className='font-semibold'></li>
         <li className='font-semibold'><a>Apps</a></li>
       <li className='font-semibold'><a>Installation</a></li>
       </ul>
     </div>
    <div className='flex justify-center items-center'>
      <img className='h-[40px] w-[40px] ' src={logo} alt="" />
-    <a className="md:text-xl font-bold bg-gradient-to-r from-[#25194eb0] to-[#9257ef] bg-clip-text text-transparent">
+    <a href='/' className="md:text-xl font-bold bg-gradient-to-r from-[#25194eb0] to-[#9257ef] bg-clip-text text-transparent">
   APP-VAULT
 </a>
 
    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li className='font-semibold'><a>Home</a></li>
-        <li className='font-semibold'><a>Apps</a></li>
-      <li className='font-semibold'><a>Installation</a></li>
+    <ul className="menu menu-horizontal px-1 gap-2">
+     <li className="font-semibold">
+    <NavLink 
+      to="/" 
+      className={({ isActive }) => 
+        isActive ? "border-2 border-black-500 " : ""
+      }
+    >
+      Home
+    </NavLink>
+  </li>
+  
+  <li className="font-semibold">
+    <NavLink 
+      to="/apps" 
+      className={({ isActive }) => 
+        isActive ? "border-b-2 border-purple-500 pb-1" : ""
+      }
+    >
+      Apps
+    </NavLink>
+  </li>
+  
+  <li className="font-semibold">
+    <NavLink 
+      to="/installation" 
+      className={({ isActive }) => 
+        isActive ? "border-b-2 border-purple-500 pb-1" : ""
+      }
+    >
+      Installation
+    </NavLink>
+  </li>
     </ul>
   </div>
   <div className="navbar-end">
