@@ -8,7 +8,6 @@ const Layout = () => {
     return (
        <>
          <Navbar></Navbar>
-         <HeroSection></HeroSection>
          <Outlet></Outlet>
          <Footer></Footer>
        </>

@@ -2,6 +2,7 @@ import React from "react";
 import heroimg from '../assets/hero.png'
 import playstore from '../assets/playstore.png'
 import appstore from '../assets/appstore.jpg'
+import { Outlet } from "react-router";
 
 const HeroSection = () => {
   return (

@@ -1,11 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Layout from './Components/Layout.jsx';
-import Homedata from './Pages/Homedata.jsx';
+import Allapp from './Components/Allapp.jsx';
+import Home from './Components/Home.jsx';
 
 const router = createBrowserRouter([
   {
@@ -13,9 +13,14 @@ const router = createBrowserRouter([
     Component:Layout,
     children:[
       {
-         path:'/',
-        Component:Homedata,
-        loader:()=>fetch('/data1.json')
+        path: '/',
+        Component: Home,
+        loader: () => fetch('/data1.json'),
+      },
+      {
+         path:'/apps',
+        Component:Allapp,
+        loader:()=>fetch('/data2.json')
       },
     ]
   },

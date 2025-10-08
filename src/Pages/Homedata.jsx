@@ -1,10 +1,9 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
 import download from '../assets/icon-downloads.png'
 import rating from '../assets/icon-ratings.png'
+import { NavLink } from 'react-router';
 
-const Homedata = () => {
-    const datas=useLoaderData();
+const Homedata = ({datas}) => {
     return (
         <div className='bg-[#f5f5f5]'>
             <h1 className='text-center text-4xl font-bold pt-7'>Trending Apps</h1>\
@@ -17,24 +16,28 @@ const Homedata = () => {
                         <img className='h-[140px] w-[160px] rounded-2xl' src={data.image} alt="" />
                         </div>
                        <h1 className='text-center mt-1 font-semibold'>{data.title}</h1>
-                       <div className='flex justify-between items-center mt-8'>
+                       <div className='flex justify-between items-center mt-6'>
                          <button>
-                            <div className='flex justify-center items-center gap-1'>
+                            <div className='flex justify-center items-center gap-1 bg-[#f1f5e8] p-2 rounded-sm'>
                                 <img className='h-[20px] w-[20px]' src={download} alt="" />
-                                <h1 className='font-semibold'>{data.downloads}M</h1>
+                                <h1 className='font-semibold text-[#00d390] text-[13px]'>{data.downloads}M</h1>
                             </div>
                          </button>
                          <button>
-                            <div className='flex justify-center items-center gap-1'>
+                            <div className='flex justify-center items-center gap-1 bg-[#fff0e1] p-2 rounded-sm'>
                                 <img className='h-[20px] w-[20px]' src={rating} alt="" />
-                                <h1 className='font-semibold'>{data.ratingAvg}M</h1>
+                                <h1 className='font-semibold text-[#ff8811]  text-[13px]'>{data.ratingAvg}M</h1>
                             </div>
                          </button>
                        </div>
+                       
                     </div>
                 ))
             }
         </div>
+         <div className='container mx-auto flex justify-center items-center py-4'>
+            <NavLink to='/apps'> <button className='btn bg-gradient-to-r from-[#703ae6d6] to-[#9257ef] text-white'>Show All</button></NavLink>
+         </div>
         </div>
     );
 };

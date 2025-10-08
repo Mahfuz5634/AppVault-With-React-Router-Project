@@ -142,5 +142,131 @@
       { "name": "4 star", "count": 30000000 },
       { "name": "5 star", "count": 126000000 }
     ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Gmail_icon_%282020%29.svg",
+    "title": "Gmail",
+    "companyName": "Google LLC",
+    "id": 9,
+    "description": "Gmail is a secure and powerful email app with spam protection, real-time notifications, and smart organization features.",
+    "size": 40,
+    "reviews": 85000000,
+    "ratingAvg": 4.6,
+    "downloads": 50,
+    "ratings": [
+      { "name": "1 star", "count": 2000000 },
+      { "name": "2 star", "count": 1500000 },
+      { "name": "3 star", "count": 4000000 },
+      { "name": "4 star", "count": 12000000 },
+      { "name": "5 star", "count": 65000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Netflix_logo.svg",
+    "title": "Netflix",
+    "companyName": "Netflix Inc.",
+    "id": 10,
+    "description": "Netflix is a streaming service that offers award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+    "size": 85,
+    "reviews": 70000000,
+    "ratingAvg": 4.3,
+    "downloads": 15,
+    "ratings": [
+      { "name": "1 star", "count": 5000000 },
+      { "name": "2 star", "count": 4000000 },
+      { "name": "3 star", "count": 9000000 },
+      { "name": "4 star", "count": 20000000 },
+      { "name": "5 star", "count": 32000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Google_Play_2022_logo.svg",
+    "title": "Google Play",
+    "companyName": "Google LLC",
+    "id": 11,
+    "description": "Google Play is a digital distribution service offering apps, games, books, movies, and more for Android users worldwide.",
+    "size": 55,
+    "reviews": 60000000,
+    "ratingAvg": 4.4,
+    "downloads": 70,
+    "ratings": [
+      { "name": "1 star", "count": 3000000 },
+      { "name": "2 star", "count": 2500000 },
+      { "name": "3 star", "count": 7000000 },
+      { "name": "4 star", "count": 15000000 },
+      { "name": "5 star", "count": 32000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Twitter_Logo_2021.svg",
+    "title": "X (Twitter)",
+    "companyName": "X Corp.",
+    "id": 12,
+    "description": "X (formerly Twitter) is a platform for real-time news, conversations, and global community interactions.",
+    "size": 42,
+    "reviews": 50000000,
+    "ratingAvg": 4.2,
+    "downloads": 20,
+    "ratings": [
+      { "name": "1 star", "count": 4000000 },
+      { "name": "2 star", "count": 3000000 },
+      { "name": "3 star", "count": 6000000 },
+      { "name": "4 star", "count": 12000000 },
+      { "name": "5 star", "count": 25000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Zoom_Communications_Logo.svg",
+    "title": "Zoom",
+    "companyName": "Zoom Video Communications",
+    "id": 13,
+    "description": "Zoom is a leading video conferencing app that offers HD meetings, webinars, screen sharing, and collaboration tools.",
+    "size": 60,
+    "reviews": 40000000,
+    "ratingAvg": 4.5,
+    "downloads": 25,
+    "ratings": [
+      { "name": "1 star", "count": 2000000 },
+      { "name": "2 star", "count": 1500000 },
+      { "name": "3 star", "count": 4000000 },
+      { "name": "4 star", "count": 8000000 },
+      { "name": "5 star", "count": 24500000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/LinkedIn_logo_initials.png",
+    "title": "LinkedIn",
+    "companyName": "LinkedIn Corporation",
+    "id": 14,
+    "description": "LinkedIn is a professional networking platform where people connect for jobs, learning, and business opportunities.",
+    "size": 50,
+    "reviews": 35000000,
+    "ratingAvg": 4.4,
+    "downloads": 30,
+    "ratings": [
+      { "name": "1 star", "count": 2000000 },
+      { "name": "2 star", "count": 1500000 },
+      { "name": "3 star", "count": 3000000 },
+      { "name": "4 star", "count": 8000000 },
+      { "name": "5 star", "count": 20500000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Google_Meet_icon_%282020%29.svg",
+    "title": "Google Meet",
+    "companyName": "Google LLC",
+    "id": 15,
+    "description": "Google Meet is a secure video meeting app offering real-time collaboration, screen sharing, and easy calendar integration.",
+    "size": 48,
+    "reviews": 30000000,
+    "ratingAvg": 4.5,
+    "downloads": 15,
+    "ratings": [
+      { "name": "1 star", "count": 1500000 },
+      { "name": "2 star", "count": 1000000 },
+      { "name": "3 star", "count": 2500000 },
+      { "name": "4 star", "count": 6000000 },
+      { "name": "5 star", "count": 19000000 }
+    ]
   }
 ]

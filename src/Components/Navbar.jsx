@@ -44,7 +44,7 @@ const Navbar = () => {
     <NavLink 
       to="/apps" 
       className={({ isActive }) => 
-        isActive ? "border-b-2 border-purple-500 pb-1" : ""
+        isActive ? "border-2 border-black-500 " : ""
       }
     >
       Apps
@@ -54,8 +54,8 @@ const Navbar = () => {
   <li className="font-semibold">
     <NavLink 
       to="/installation" 
-      className={({ isActive }) => 
-        isActive ? "border-b-2 border-purple-500 pb-1" : ""
+     className={({ isActive }) => 
+        isActive ? "border-2 border-black-500 " : ""
       }
     >
       Installation
