@@ -17,7 +17,7 @@ const HeroSection = () => {
       </p>
       <div className="my-6 flex flex-col md:flex-row">
         <button className="btn mr-2"><span><img className="h-[32px] w-[32px]" src={playstore} alt="" /></span><a href="https://play.google.com/store/games?hl=en">Google Play</a></button>
-        <button className="btn"><span><img className="h-[32px] w-[32px]" src={appstore} alt="" /></span>App Store</button>
+        <button className="btn"><span><img className="h-[32px] w-[32px]" src={appstore} alt="" /></span><a href="https://www.apple.com/app-store/">App Store</a></button>
       </div>
       <div>
         <img src={heroimg} alt="" />

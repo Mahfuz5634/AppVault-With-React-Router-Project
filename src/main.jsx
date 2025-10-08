@@ -6,6 +6,7 @@ import { RouterProvider } from "react-router/dom";
 import Layout from './Components/Layout.jsx';
 import Allapp from './Components/Allapp.jsx';
 import Home from './Components/Home.jsx';
+import Details from './Pages/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,12 @@ const router = createBrowserRouter([
         Component:Allapp,
         loader:()=>fetch('/data2.json')
       },
+      {
+        path:'/details/:id',
+        Component:Details,
+        loader:()=>fetch('/data2.json')
+      },
+      
     ]
   },
 ]);

@@ -11,6 +11,7 @@ const Homedata = ({datas}) => {
             <div className='grid md:grid-cols-4 grid-cols-1 gap-y-5 p-15 md:p-5 container mx-auto'>
             {
                 datas.map(data=>(
+                  <NavLink to={`/details/${data.id}`}>
                     <div className='hover:scale-105 shadow-sm w-[280px] h-[300px] bg-white p-10 rounded-2xl'>
                        <div className='flex flex-col items-center justify-center bg-gray-200 p-1 rounded-xl'>
                         <img className='h-[140px] w-[160px] rounded-2xl' src={data.image} alt="" />
@@ -32,6 +33,7 @@ const Homedata = ({datas}) => {
                        </div>
                        
                     </div>
+                  </NavLink>
                 ))
             }
         </div>

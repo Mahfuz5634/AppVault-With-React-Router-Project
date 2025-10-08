@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router";
+import { NavLink, useLoaderData } from "react-router";
 import download from "../assets/icon-downloads.png";
 import rating from "../assets/icon-ratings.png";
 
@@ -48,7 +48,8 @@ const Allapp = () => {
       </div>
       <div className="grid md:grid-cols-4 grid-cols-1 gap-y-5 p-15 md:p-5 container mx-auto">
         {searchProduct.map((data) => (
-          <div className="hover:scale-105 shadow-sm w-[280px] h-[300px] bg-white p-10 rounded-2xl">
+          <NavLink to={`/details/${data.id}`}>
+            <div className="hover:scale-105 shadow-sm w-[280px] h-[300px] bg-white p-10 rounded-2xl">
             <div className="flex flex-col items-center justify-center bg-gray-200 p-1 rounded-xl">
               <img
                 className="h-[140px] w-[160px] rounded-2xl"
@@ -76,6 +77,7 @@ const Allapp = () => {
               </button>
             </div>
           </div>
+          </NavLink>
         ))}
       </div>
     </div>
