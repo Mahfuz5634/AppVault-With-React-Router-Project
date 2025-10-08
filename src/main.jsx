@@ -5,11 +5,19 @@ import App from './App.jsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Layout from './Components/Layout.jsx';
+import Homedata from './Pages/Homedata.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component:Layout,
+    children:[
+      {
+        index:true,
+        Component:Homedata,
+        loader:()=>fetch('/data1.json')
+      },
+    ]
   },
 ]);
 
