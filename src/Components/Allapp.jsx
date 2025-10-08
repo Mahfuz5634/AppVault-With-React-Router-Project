@@ -5,20 +5,22 @@ import rating from "../assets/icon-ratings.png";
 
 const Allapp = () => {
   const data = useLoaderData();
-  const [datas, setdatas] = useState(data);
+  const [search,setsearch]=useState('') 
+  const trim=search.trim().toLocaleLowerCase();
+  const searchProduct=trim?data.filter(data=>data.title.toLocaleLowerCase().includes(trim)):data;
 
   return (
     <div className="bg-[#f5f5f5]">
-      <h1 className="text-center text-4xl font-bold pt-7">
+      <h1 className="text-center md:text-4xl font-bold pt-7">
         Our All Application
       </h1>
       \
       <p className="text-center  text-[#627382]">
         Explore All Apps on the Market developed by us. We code for Millions
       </p>
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="md:container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div>
-          <h1 className="font-bold text-xl">({data.length})Apps Found</h1>
+          <h1 className="font-bold text-xl">({searchProduct.length})Apps Found</h1>
         </div>
         <div>
           <label className="input">
@@ -38,12 +40,14 @@ const Allapp = () => {
                 <path d="m21 21-4.3-4.3"></path>
               </g>
             </svg>
-            <input type="search" required placeholder="Search" />
+            <input value={search} onChange={
+              e=>setsearch(e.target.value)
+            } type="search" required placeholder="Search" />
           </label>
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-y-5 p-5 container mx-auto">
-        {datas.map((data) => (
+      <div className="grid md:grid-cols-4 grid-cols-1 gap-y-5 p-15 md:p-5 container mx-auto">
+        {searchProduct.map((data) => (
           <div className="hover:scale-105 shadow-sm w-[280px] h-[300px] bg-white p-10 rounded-2xl">
             <div className="flex flex-col items-center justify-center bg-gray-200 p-1 rounded-xl">
               <img

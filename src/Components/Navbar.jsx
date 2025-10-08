@@ -14,9 +14,38 @@ const Navbar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li className='font-semibold'></li>
-        <li className='font-semibold'><a>Apps</a></li>
-      <li className='font-semibold'><a>Installation</a></li>
+       <li className="font-semibold">
+    <NavLink 
+      to="/" 
+      className={({ isActive }) => 
+        isActive ? "md:border-2 border-1 border-black-500 " : ""
+      }
+    >
+      Home
+    </NavLink>
+  </li>
+  
+  <li className="font-semibold">
+    <NavLink 
+      to="/apps" 
+      className={({ isActive }) => 
+        isActive ? "border-2 border-black-500 " : ""
+      }
+    >
+      Apps
+    </NavLink>
+  </li>
+  
+  <li className="font-semibold">
+    <NavLink 
+      to="/installation" 
+     className={({ isActive }) => 
+        isActive ? "border-2 border-black-500 " : ""
+      }
+    >
+      Installation
+    </NavLink>
+  </li>
       </ul>
     </div>
    <div className='flex justify-center items-center'>
@@ -33,7 +62,7 @@ const Navbar = () => {
     <NavLink 
       to="/" 
       className={({ isActive }) => 
-        isActive ? "border-2 border-black-500 " : ""
+        isActive ? "md:border-2 border-1 border-black-500 " : ""
       }
     >
       Home

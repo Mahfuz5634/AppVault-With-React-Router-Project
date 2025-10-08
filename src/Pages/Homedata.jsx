@@ -8,7 +8,7 @@ const Homedata = ({datas}) => {
         <div className='bg-[#f5f5f5]'>
             <h1 className='text-center text-4xl font-bold pt-7'>Trending Apps</h1>\
             <p className='text-center  text-[#627382]'>Explore All Trending Apps on the Market developed by us</p>
-            <div className='grid grid-cols-4 gap-y-5 p-5 container mx-auto'>
+            <div className='grid md:grid-cols-4 grid-cols-1 gap-y-5 p-15 md:p-5 container mx-auto'>
             {
                 datas.map(data=>(
                     <div className='hover:scale-105 shadow-sm w-[280px] h-[300px] bg-white p-10 rounded-2xl'>
