@@ -21,7 +21,7 @@ const setlocal = (rdata) => {
   }
   
 };
-const notify = () => toast("✅App Installed Succesfully");
+const notify = () => toast("App Installed Succesfully✅");
 
 const Details = () => {
   const [active, setActive] = useState(false);

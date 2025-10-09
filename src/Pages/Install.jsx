@@ -29,7 +29,7 @@ const Install = () => {
   setinstallData(filtered);
   const remainingIds = filtered.map(item => item.id);
   localStorage.setItem('app', JSON.stringify(remainingIds));
-  toast("Uninstall Succesfully")
+  toast("Uninstall Succesfully❌")
   
 };
 
@@ -90,7 +90,7 @@ const Install = () => {
                 </div>
                 <div>
                   <h1 className="text-xl font-bold">{item.title}</h1>
-                  <div className="flex items-center gap-4 text-sm text-gray-700 mt-1">
+                  <div className="flex items-center md:gap-4 gap-1 text-sm text-gray-700 mt-1">
                     <p className="flex items-center gap-1">
                       <Download className="w-4 h-4 text-gray-500" />
                       {item.downloads}M

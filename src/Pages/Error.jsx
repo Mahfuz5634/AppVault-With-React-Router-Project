@@ -3,7 +3,7 @@ import error from '../assets/error-404.png'
 import { NavLink } from 'react-router';
 const Error = () => {
     return (
-        <div className='container mx-auto flex flex-col justify-center items-center'>
+        <div className='container mx-auto flex flex-col justify-center items-center mb-4'>
           <img className='w-[400px] h-[400px]' src={error} alt="" />
           <h1 className='text-3xl font-bold'>Oops, page not found!</h1>
           <p className='opacity-90'>The page you are looking for is not available.</p>
