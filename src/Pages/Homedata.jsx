@@ -13,8 +13,8 @@ const Homedata = ({datas}) => {
                 datas.map(data=>(
                   <NavLink to={`/details/${data.id}`}>
                     <div className='hover:scale-105 shadow-sm w-[280px] h-[300px] bg-white p-10 rounded-2xl'>
-                       <div className='flex flex-col items-center justify-center bg-gray-200 p-1 rounded-xl'>
-                        <img className='h-[140px] w-[160px] rounded-2xl' src={data.image} alt="" />
+                       <div className='flex flex-col items-center justify-center bg-gray-200 py-2 rounded-xl'>
+                        <img className='h-[120px] w-[140px rounded-2xl' src={data.image} alt="" />
                         </div>
                        <h1 className='text-center mt-1 font-semibold'>{data.title}</h1>
                        <div className='flex justify-between items-center mt-6'>
