@@ -11,30 +11,26 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-
-
 const setlocal = (rdata) => {
-    const data = JSON.parse(localStorage.getItem('app')) || [];
-    if (!data.some(item => item === rdata)) {
-        data.push(rdata);
-        localStorage.setItem('app', JSON.stringify(data));
-    }
-}
-
-
+  const data = JSON.parse(localStorage.getItem("app")) || [];
+  if (!data.some((item) => item === rdata)) {
+    data.push(rdata);
+    localStorage.setItem("app", JSON.stringify(data));
+  }
+};
 
 const Details = () => {
-  const [active,setactive]= useState(false);
+  const [active, setActive] = useState(false);
+
   const data = useLoaderData();
   const { id } = useParams();
   const finalData = data.find((p) => p.id == id);
 
-  
   const ratingData = finalData.ratings.map((r) => ({
     rating: r.name,
     users: r.count,
   }));
-
+  console.log(active);
   return (
     <div className="bg-[#f5f5f5] py-5">
       <div className="container mx-auto">
@@ -85,16 +81,26 @@ const Details = () => {
               </span>
               <span className="text-sm text-gray-500">Total Reviews</span>
             </div>
-            <button disabled={active}  onClick={()=>{setlocal(finalData.id);setactive(true);}}  className="bg-green-500 text-white px-6 py-2 rounded-md font-medium hover:bg-green-600 transition">
-              {active?'Installed':'Install Now'} ({finalData.size} MB)
+            <button
+              disabled={active}
+              onClick={() => {
+                setlocal(finalData.id);
+                setActive(true);
+              }}
+              className={`px-6 py-2 rounded-md font-medium transition
+    ${
+      active
+        ? "bg-gray-400 cursor-not-allowed text-white"
+        : "bg-green-500 hover:bg-green-600 text-white"
+    }`}
+            >
+              {active ? "Installed" : "Install Now"} ({finalData.size} MB)
             </button>
           </div>
         </div>
 
-       
         <div className="mt-10"></div>
 
-       
         <div className="max-w-full bg-white rounded-lg shadow p-8 mt-10">
           <h2 className="text-lg font-semibold mb-4">User Ratings</h2>
           <ResponsiveContainer width="100%" height={300}>
@@ -107,13 +113,9 @@ const Details = () => {
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
                 type="number"
-                tickFormatter={(value) => `${(value / 1000000).toFixed(1)}M`} 
+                tickFormatter={(value) => `${(value / 1000000).toFixed(1)}M`}
               />
-              <YAxis
-                type="category"
-                dataKey="rating"
-                reversed 
-              />
+              <YAxis type="category" dataKey="rating" reversed />
               <Tooltip
                 formatter={(value) => `${(value / 1000000).toFixed(1)}M`}
               />

@@ -7,11 +7,13 @@ import { Outlet } from 'react-router';
 const Layout = () => {
     return (
        <>
-         <Navbar></Navbar>
-         <div className='w-full md:min-h-[600px]'>
+        <div className='min-h-screen flex flex-col'>
+           <Navbar></Navbar>
+         <div className='flex-1'>
           <Outlet></Outlet>
          </div>
          <Footer></Footer>
+        </div>
        </>
     );
 };

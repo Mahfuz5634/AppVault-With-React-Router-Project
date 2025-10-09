@@ -82,7 +82,7 @@ const Navbar = () => {
   
   <li className="font-semibold">
     <NavLink 
-      to="/installation" 
+      to="/install" 
      className={({ isActive }) => 
         isActive ? "border-2 border-black-500 " : ""
       }

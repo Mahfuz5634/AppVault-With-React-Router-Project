@@ -8,6 +8,7 @@ import Allapp from "./Components/Allapp.jsx";
 import Home from "./Components/Home.jsx";
 import Details from "./Pages/Details.jsx";
 import Error from "./Pages/Error.jsx";
+import Install from "./Pages/Install.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         Component: Details,
+        loader: () => fetch("/data2.json"),
+      },
+      {
+        path: "/install",
+        Component:Install,
         loader: () => fetch("/data2.json"),
       },
       {
