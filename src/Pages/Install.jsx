@@ -2,6 +2,7 @@ import { ArrowDown, Download, Star } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import NotFound from "./NotFound";
+import {toast, ToastContainer} from "react-toastify";
 
 const Install = () => {
   const data = useLoaderData();
@@ -22,6 +23,17 @@ const Install = () => {
     const sorted =[...installData].sort((a,b)=>a.downloads-b.downloads);
     setinstallData(sorted);
   }
+
+ const uninstall = (id) => {
+  const filtered = installData.filter((item) => item.id !== id);
+  setinstallData(filtered);
+  const remainingIds = filtered.map(item => item.id);
+  localStorage.setItem('app', JSON.stringify(remainingIds));
+  toast("Uninstall Succesfully")
+  
+};
+
+
 
   return (
     <div className="bg-[#f5f5f5] py-5">
@@ -76,7 +88,7 @@ const Install = () => {
                 <div>
                   <img className="h-[80px] w-[80px]" src={item.image} alt="" />
                 </div>
-                <di>
+                <div>
                   <h1 className="text-xl font-bold">{item.title}</h1>
                   <div className="flex items-center gap-4 text-sm text-gray-700 mt-1">
                     <p className="flex items-center gap-1">
@@ -95,10 +107,10 @@ const Install = () => {
                       {item.size}MB
                     </p>
                   </div>
-                </di>
+                </div>
               </div>
               <div>
-                <button className="btn bg-[#00d390] text-white">
+                <button onClick={()=>uninstall(item.id)} className="btn bg-[#00d390] text-white">
                   Uninstall
                 </button>
               </div>
@@ -106,6 +118,7 @@ const Install = () => {
           </div>
         ))
       )}
+        <ToastContainer />
     </div>
   );
 };

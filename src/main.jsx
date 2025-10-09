@@ -10,32 +10,43 @@ import Details from "./Pages/Details.jsx";
 import Error from "./Pages/Error.jsx";
 import Install from "./Pages/Install.jsx";
 
-
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 const router = createBrowserRouter([
   {
     path: "/",
-    hydrateFallbackElement: <p>Loading...</p>,
     Component: Layout,
     children: [
       {
         path: "/",
         Component: Home,
-        loader: () => fetch("/data1.json"),
+        loader: async () => {
+          await delay(1000);
+          return fetch("/data1.json");
+        },
       },
       {
         path: "/apps",
         Component: Allapp,
-        loader: () => fetch("/data2.json"),
+        loader: async () => {
+          await delay(1000);
+          return fetch("/data2.json");
+        },
       },
       {
         path: "/details/:id",
         Component: Details,
-        loader: () => fetch("/data2.json"),
+        loader: async () => {
+          await delay(1000);
+          return fetch("/data2.json");
+        },
       },
       {
         path: "/install",
-        Component:Install,
-        loader: () => fetch("/data2.json"),
+        Component: Install,
+        loader: async () => {
+          await delay(1000);
+          return fetch("/data2.json");
+        },
       },
       {
         path: "*",
@@ -45,9 +56,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />,
+    <RouterProvider router={router} />
   </StrictMode>
 );
