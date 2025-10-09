@@ -10,6 +10,7 @@ import Details from "./Pages/Details.jsx";
 import Error from "./Pages/Error.jsx";
 import Install from "./Pages/Install.jsx";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

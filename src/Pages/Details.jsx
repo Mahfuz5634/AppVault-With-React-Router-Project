@@ -10,6 +10,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import {toast, ToastContainer} from "react-toastify";
+
 
 const setlocal = (rdata) => {
   const data = JSON.parse(localStorage.getItem("app")) || [];
@@ -17,7 +19,9 @@ const setlocal = (rdata) => {
     data.push(rdata);
     localStorage.setItem("app", JSON.stringify(data));
   }
+  
 };
+const notify = () => toast("✅App Installed Succesfully");
 
 const Details = () => {
   const [active, setActive] = useState(false);
@@ -86,6 +90,8 @@ const Details = () => {
               onClick={() => {
                 setlocal(finalData.id);
                 setActive(true);
+                notify();
+                
               }}
               className={`px-6 py-2 rounded-md font-medium transition
     ${
@@ -135,6 +141,7 @@ const Details = () => {
           </p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

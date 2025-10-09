@@ -1,6 +1,7 @@
 import { ArrowDown, Download, Star } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
+import NotFound from "./NotFound";
 
 const Install = () => {
   const data = useLoaderData();
@@ -63,7 +64,7 @@ const Install = () => {
         </div>
       </div>
       {installData.length === 0 ? (
-        <p>No installed apps found.</p>
+        <NotFound></NotFound>
       ) : (
         installData.map((item) => (
           <div
