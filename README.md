@@ -18,7 +18,7 @@ AppVault is a React-based single-page application (SPA) that uses **React Router
 
 - **Frontend:** React  
 - **Routing:** react-router-dom  
-- **Styling:** (যদি TailwindCSS, CSS Modules 
+- **Styling:** TailwindCSS, CSS
 
 ---
 
